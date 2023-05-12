@@ -1,0 +1,151 @@
+.header {
+    width: 100%;
+    height: 100px;
+    // padding: 35px 0px 30px 0;
+    z-index: 30;
+    position: relative;
+    background-image: url("https://burgerking.vn/skin/frontend/bk2/default/images/bg-header-bottom.png");
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+
+
+    @keyframes stuckMoveDown {
+        from {
+
+            transform: translateY(-100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    &.shrink {
+        position: fixed;
+        z-index: 99;
+        height: 100px;
+        // padding: 25px 0px 30px 0;
+        animation: stuckMoveDown .8s;
+    }
+
+
+    &__row {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        z-index: 2;
+        padding: 0 15px;
+        max-width: 1540px;
+
+    }
+
+    &__logo {
+        width: 150px;
+        margin-left: 0;
+        margin-right: 30px;
+
+        a {
+            text-decoration: none;
+            display: block;
+            font-size: 3.2rem;
+            margin: -5px 0 -20px;
+            z-index: 100;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__navbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        &-item {
+            position: relative;
+            display: inline-block;
+            top: -15px;
+            margin-right: 30px;
+
+            a {
+                display: block;
+                font-size: 23px;
+                text-transform: uppercase;
+                color: #fff;
+                padding: 21px 15px;
+                font-family: "block-pro", "Helvetica Neue", Verdana, Arial, sans-serif;
+                text-decoration: none;
+            }
+        }
+
+        &-item.active {
+            a {
+                color: #6e3d2e;
+            }
+        }
+
+    }
+
+    &__cart {
+        position: relative;
+        top: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background-image: url(https://burgerking.vn/skin/frontend/bk2/default/images/bg-btn-white.png);
+        width: 170px;
+        height: 60px;
+        /* padding-top: 5px; */
+        padding: 15px;
+        margin: 9px -4px 0 10px;
+        font-size: 17px;
+        background-color: transparent !important;
+        color: #f17a00;
+        text-decoration: none;
+
+        &-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 18px;
+        }
+
+
+        i {
+            float: left;
+            cursor: pointer;
+            margin-right: 4px;
+        }
+
+        span {
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            margin-right: 4px;
+        }
+
+
+
+        &-number {
+            font-size: 17px !important;
+            background-color: #fff;
+            color: #f17a00;
+            border-radius: 4px;
+            padding: 0;
+            line-height: 20px !important;
+            display: inline-block;
+            min-width: 23px;
+            font-weight: bold;
+            font-family: sans-serif;
+            border: 2px solid #f47d02;
+        }
+
+    }
+
+    a:hover {
+        color: #6e3d2e;
+    }
+}

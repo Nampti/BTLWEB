@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Are you sure you want to delete this product ?</h1>
+<form action="#" th:action="@{/admin/delete/{id}(id=${product.id})}" th:object="${product}" method="POST" >
+			<div class="flex"><h4>Product code :</h4>
+			<p th:text="${product.name}"></p></div>
+			<div class="flex"><h4>Product description :</h4>
+			<p th:text="${product.description}"></p></div>
+			<div class="flex"><h4>Product price :</h4>
+			<p th:text="${product.price}"></p></div>
+			<button type="submit" class="btn btn-info col-2">Yes</button>
+			<button><a href="/admin/products">No</a></button>
+		</form>
+
+</body>
+</html>

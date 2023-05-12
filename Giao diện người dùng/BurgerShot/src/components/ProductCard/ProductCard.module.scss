@@ -1,0 +1,85 @@
+.product-card {
+
+    a {
+        text-decoration: none;
+    }
+
+    text-align: center;
+    margin-bottom: 30px;
+
+    &-container {
+        box-shadow: 0 1px 3px -2px rgb(0 0 0 / 12%),
+            0 1px 2px rgb(0 0 0 / 24%);
+        border-radius: 8px;
+        background: #fff;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    &-container:hover {
+        box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 22%) !important;
+    }
+
+    &-container:hover img {
+        // transform: scale(1.1);
+        transition: filter .6s, opacity .6s, transform .6s, box-shadow .3s;
+
+    }
+
+    &-img {
+        border-radius: 3%;
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    &-deltails {
+        padding: 13px 10px 25px 10px;
+
+        &--title {
+            margin-bottom: 0.184rem;
+
+            h2 {
+                font-size: 20px;
+                font-family: "sfudinengalt", "Helvetica Neue", Verdana, Arial, sans-serif;
+                line-height: 18px;
+                display: block;
+                font-weight: 700;
+                color: #000;
+                height: 37px;
+                margin-bottom: 5px;
+
+            }
+
+
+            p {
+                font-size: 22px;
+                line-height: 18px;
+                font-family: "sfudinengalt", "Helvetica Neue", Verdana, Arial, sans-serif;
+                color: #00000085;
+                letter-spacing: .075em;
+                margin: 0;
+                height: 36px;
+                overflow: hidden;
+            }
+
+
+
+        }
+
+
+        span {
+            color: #c31c1c;
+            font-size: 30px;
+            font-family: "block-pro", "Helvetica Neue", Verdana, Arial, sans-serif;
+        }
+
+
+        &--icon {
+            font-size: 2rem !important;
+        }
+    }
+}

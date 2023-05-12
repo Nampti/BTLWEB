@@ -1,0 +1,42 @@
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0 80px;
+
+    img {
+        min-height: 58px;
+        border-radius: 50%;
+        max-width: 58px;
+        padding: 5px;
+        margin: 5px auto;
+    }
+
+    &:hover {
+        color: #f17a00;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    &__checkmark {
+        margin-right: 10px;
+        height: 15px;
+        width: 15px;
+        border: 1px solid #8d8d8d;
+
+        i {
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+    }
+
+}
